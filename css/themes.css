@@ -1,7 +1,7 @@
 :root {
     --inputbg: #6B0000;
     --inputborder: #8B0000;
-    --uibg: #111111;
+    --uibg: #8B0000;
     --textcolor: #ffffff;
     --bg: #0c0c0c;
 }
@@ -9,7 +9,7 @@
 body {
     --inputbg: #6B0000;
     --inputborder: #8B0000;
-    --uibg: #111111;
+    --uibg: #8B0000;
     --textcolor: #ffffff;
     --bg: #0c0c0c;
 }
@@ -45,7 +45,7 @@ body[theme=seraph],
 body[theme=nighttime] {
     --inputbg: #6B0000;
     --inputborder: #8B0000;
-    --uibg: #111111;
+    --uibg: #8B0000;
     --textcolor: #ffffff;
     --bg: #0c0c0c;
     --shadow: 0px 0px 4px #8B0000;
