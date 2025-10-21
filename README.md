@@ -1,2 +1,3 @@
-# GX-GamesCrack.github.io
-GX-GamesCrack V2. you can find V1 on sites.google.com/view/gx-gamescrack
+So i took selenite and brought it back to github
+
+idk how to deploy stuff to github pages tho
