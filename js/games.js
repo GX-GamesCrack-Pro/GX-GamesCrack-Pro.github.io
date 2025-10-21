@@ -1,6 +1,4 @@
-$.getJSON("/data/games.json", function (data) else {
-		let areGamesReady = setInterval(() => {
-			if (document.readyState === "complete") {
+$.getJSON("/data/games.json", function (data) {
 				loadGames(data);
 				clearInterval(areGamesReady);
 			}
