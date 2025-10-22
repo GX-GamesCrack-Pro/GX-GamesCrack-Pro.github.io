@@ -24,19 +24,21 @@
 		<script src="/js/widget.js"></script>
 <script>
 document.addEventListener("DOMContentLoaded", () => {
-  fetch("https://gx-gamescrack.github.io/data/quotes.json")
-    .then((response) => {
+  const quoteEl = document.getElementById("randomquote");
+
+  fetch("https://gx-gamescrack.github.io/data/quotes.json", { cache: "no-store" })
+    .then(response => {
       if (!response.ok) throw new Error("Quotes file not found");
       return response.json();
     })
-    .then((data) => {
+    .then(data => {
+      if (!Array.isArray(data) || data.length === 0) throw new Error("Quotes file empty");
       const randomQuote = data[Math.floor(Math.random() * data.length)];
-      document.getElementById("randomquote").textContent = randomQuote;
+      quoteEl.textContent = randomQuote;
     })
-    .catch((error) => {
+    .catch(error => {
       console.error("Error loading quotes:", error);
-      document.getElementById("randomquote").textContent =
-        "better thank me for this unblocked website";
+      quoteEl.textContent = "better thank me for this unblocked website";
     });
 });
 </script>
@@ -63,7 +65,7 @@ document.addEventListener("DOMContentLoaded", () => {
 		<main id="main" class="noscroll">
 			<b style="font-weight: 800px"><h1 class="chan">WELCOME</h1></b>
 			<noscript>enable javascript if you want the games to actually load</noscript>
-			<p id="randomquote"></p>
+	<p id="randomquote">better thank me for this unblocked website</p>
 			<div class="samerow">
 				<div class="img-container">
 					<a href="/users"><img src="img/user_index.svg" /></a>
