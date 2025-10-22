@@ -25,20 +25,22 @@
 		<script src="/js/widget.js"></script>
 		<script>
 document.addEventListener("DOMContentLoaded", () => {
+	const quoteEl = document.getElementById("randomquote");
+	if (!quoteEl) return; // no element found, exit
+
 	fetch("/data/quotes.json")
-		.then(response => response.json())
+		.then(response => response.ok ? response.json() : Promise.reject(response))
 		.then(data => {
 			if (!Array.isArray(data) || data.length === 0) {
-				document.getElementById("randomquote").textContent = "No quotes available.";
+				quoteEl.textContent = "better thank me for this unblocked website";
 				return;
 			}
-
 			const randomQuote = data[Math.floor(Math.random() * data.length)];
-			document.getElementById("randomquote").textContent = randomQuote;
+			quoteEl.textContent = randomQuote || "better thank me for this unblocked website";
 		})
 		.catch(error => {
 			console.error("Error loading quotes:", error);
-			document.getElementById("randomquote").textContent = "Failed to load quote.";
+			quoteEl.textContent = "better thank me for this unblocked website";
 		});
 });
 </script>
