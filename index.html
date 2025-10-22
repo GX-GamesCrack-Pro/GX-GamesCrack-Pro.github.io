@@ -79,6 +79,9 @@ document.addEventListener("DOMContentLoaded", () => {
 			</div>
 		</main>
 	<footer class="footer">
+  <!-- Left placeholder -->
+  <div class="footer-left"></div>
+
   <!-- Centered Links -->
   <div class="footer-links">
     <a href="https://github.com/gx-gamescrack/gx-gamescrack.github.io">Source</a>
@@ -90,44 +93,62 @@ document.addEventListener("DOMContentLoaded", () => {
   </div>
 
   <!-- Right-aligned Name -->
-  <p class="footer-name">Built By Jon Stearns</p>
+  <div class="footer-right">
+    <p>Built By Jon Stearns</p>
+  </div>
 </footer>
 
 <style>
   .footer {
     display: flex;
     align-items: center;
-    justify-content: center; /* center links by default */
+    justify-content: space-between;
     flex-wrap: wrap;
     padding: 10px 20px;
-    position: relative; /* for positioning right name */
-    background: #f8f8f8;
+    background-color: #8B0000;
+    color: #ffffff;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .footer-left,
+  .footer-right {
+    flex: 1;
+    display: flex;
+    align-items: center;
+  }
+
+  .footer-left {
+    justify-content: flex-start;
+  }
+
+  .footer-right {
+    justify-content: flex-end;
   }
 
   .footer-links {
     display: flex;
     gap: 15px;
-    flex-wrap: wrap;
     justify-content: center;
-    flex: 1;
+    flex-wrap: wrap;
   }
 
-  .footer-name {
-    margin: 0;
-    white-space: nowrap;
-    text-align: right;
-    flex-shrink: 0; /* prevent it from shrinking on small screens */
+  .footer-links a {
+    color: inherit;
+    text-decoration: none;
   }
 
-  /* Optional: on small screens, stack links and name */
+  /* Responsive: stack on smaller screens */
   @media (max-width: 600px) {
     .footer {
       flex-direction: column;
       align-items: center;
     }
-    .footer-name {
-      margin-top: 10px;
-      text-align: center;
+    .footer-left,
+    .footer-right {
+      width: 100%;
+      justify-content: center;
+      margin: 5px 0;
     }
   }
 </style>
