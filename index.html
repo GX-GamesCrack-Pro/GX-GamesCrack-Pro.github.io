@@ -89,5 +89,22 @@ document.addEventListener("DOMContentLoaded", () => {
 			<a href="/about.html">About</a>
 			<p style="text-align: left;">Built By Jon Stearns</p>
 		</footer>
+		<script>
+async function loadQuote() {
+  const quoteEl = document.getElementById("quote");
+  try {
+    const res = await fetch("./data/quotes.json");
+    if (!res.ok) throw new Error("Fetch failed");
+    const quotes = await res.json();
+    const random = quotes[Math.floor(Math.random() * quotes.length)];
+    quoteEl.textContent = random;
+  } catch (err) {
+    // fallback if JSON doesn't load
+    quoteEl.textContent = "better thank me for this unblocked games website";
+  }
+}
+
+document.addEventListener("DOMContentLoaded", loadQuote);
+</script>
 	</body>
 </html>
