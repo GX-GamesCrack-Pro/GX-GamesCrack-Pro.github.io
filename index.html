@@ -24,20 +24,24 @@
 		<script src="/js/main.js"></script>
 		<script src="/js/widget.js"></script>
 		<script>
-			document.addEventListener("DOMContentLoaded", () => {
-				fetch("/data/quotes.json")
-					.then((response) => response.json())
-					.then((data) => {
-						const randomQuote = data[Math.floor(Math.random() * data.length)];
-						{
-							randomQuote = window.location.hostname;
-						}
+document.addEventListener("DOMContentLoaded", () => {
+	fetch("/data/quotes.json")
+		.then((response) => response.json())
+		.then((data) => {
+			let randomQuote = data[Math.floor(Math.random() * data.length)];
 
-						document.getElementById("randomquote").innerHTML = randomQuote;
-					})
-					.catch((error) => console.error("Error loading quotes:", error));
-			});
-		</script>
+			if (randomQuote.includes("OGNUM1") && randomQuote.includes("SQRTNUM1")) {
+				const ognum = Math.floor(Math.random() * 3000);
+				randomQuote = `the square root of ${ognum} is ${Math.sqrt(ognum)}`;
+			} else if (randomQuote.includes("CURRENTURL")) {
+				randomQuote = window.location.hostname;
+			}
+
+			document.getElementById("randomquote").innerHTML = randomQuote;
+		})
+		.catch((error) => console.error("Error loading quotes:", error));
+});
+</script>
 
 		<link rel="stylesheet" href="/style.css" />
 		<link rel="manifest" href="/manifest.json" />
