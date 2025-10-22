@@ -78,10 +78,9 @@ document.addEventListener("DOMContentLoaded", () => {
 				</div>
 			</div>
 		</main>
-	<footer style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; padding: 10px 20px;">
-  
+	<footer class="footer">
   <!-- Centered Links -->
-  <div style="flex: 1; display: flex; justify-content: center; gap: 15px; flex-wrap: wrap;">
+  <div class="footer-links">
     <a href="https://github.com/gx-gamescrack/gx-gamescrack.github.io">Source</a>
     <a href="https://discord.gg/KddjwqdRK">Discord</a>
     <a href="/suggest.html">Suggestions & Bugs</a>
@@ -91,8 +90,46 @@ document.addEventListener("DOMContentLoaded", () => {
   </div>
 
   <!-- Right-aligned Name -->
-  <p style="margin: 0; white-space: nowrap;">Built By Jon Stearns</p>
-
+  <p class="footer-name">Built By Jon Stearns</p>
 </footer>
+
+<style>
+  .footer {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* center links by default */
+    flex-wrap: wrap;
+    padding: 10px 20px;
+    position: relative; /* for positioning right name */
+    background: #f8f8f8;
+  }
+
+  .footer-links {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex: 1;
+  }
+
+  .footer-name {
+    margin: 0;
+    white-space: nowrap;
+    text-align: right;
+    flex-shrink: 0; /* prevent it from shrinking on small screens */
+  }
+
+  /* Optional: on small screens, stack links and name */
+  @media (max-width: 600px) {
+    .footer {
+      flex-direction: column;
+      align-items: center;
+    }
+    .footer-name {
+      margin-top: 10px;
+      text-align: center;
+    }
+  }
+</style>
 	</body>
 </html>
