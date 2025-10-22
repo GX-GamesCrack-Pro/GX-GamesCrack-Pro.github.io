@@ -16,6 +16,27 @@ body {
     --shadow: 0px 0px 4px #8B0000;
 }
 
+/* Override default purple for main theme */
+body[theme=main],
+body[theme=mainnew] {
+    --inputbg: #6B0000;
+    --inputborder: #8B0000;
+    --uibg: #8B0000;
+    --textcolor: #ffffff;
+    --bg: #0c0c0c;
+    --shadow: 0px 0px 4px #8B0000;
+}
+
+/* Selenite2 = old main/purple theme */
+body[theme=selenite2] {
+    --inputbg: #3c096c;
+    --inputborder: #5a189a;
+    --uibg: #240046bb;
+    --textcolor: #fff;
+    --bg: linear-gradient(0deg, rgba(36,0,70,1) 0%, rgba(60,9,108,1) 50%, rgba(36,0,70,1) 100%);
+}
+
+/* Keep all other themes as they were */
 body[theme=threekho] {
     --inputbg: #28A018;
     --inputborder: #0A8F00;
@@ -28,7 +49,7 @@ body[theme=art] {
     --inputbg: #0284d4;
     --inputborder: #0284d4;
     --uibg: #0e1213;
-    --textcolor: #ffffff;
+    --textcolor: #fff;
     --bg: #1a2023;
 }
 
@@ -44,22 +65,6 @@ body[theme=custom] {
     --inputbg: #3c096c;
     --inputborder: #5a189a;
     --uibg: #240046;
-    --textcolor: #fff;
-    --bg: #10002b;
-}
-
-body[theme=mainnew] {
-    --inputbg: #3c096c;
-    --inputborder: #5a189a;
-    --uibg: #240046bb;
-    --textcolor: #fff;
-    --bg: linear-gradient(0deg, rgba(36,0,70,1) 0%, rgba(60,9,108,1) 50%, rgba(36,0,70,1) 100%);
-}
-
-body[theme=main] {
-    --inputbg: #3c096c;
-    --inputborder: #5a189a;
-    --uibg: #240046bb;
     --textcolor: #fff;
     --bg: #10002b;
 }
@@ -96,6 +101,7 @@ body[theme=cools1te] {
     --bg: #8e14af;
 }
 
+/* Latte/Frappe/Macchiato/Mocha themes */
 body[theme=lattefalse] {
     --inputbg: #9ca0b0;
     --inputborder: #8c8fa1;
@@ -104,7 +110,6 @@ body[theme=lattefalse] {
     --bg: #eff1f5;
     --shadow: 0px 0px 4px #ccd0da;
 }
-
 body[theme=frappefalse] {
     --inputbg: #737994;
     --inputborder: #838ba7;
@@ -113,7 +118,6 @@ body[theme=frappefalse] {
     --bg: #303446;
     --shadow: 0px 0px 4px #414559;
 }
-
 body[theme=macchiatofalse] {
     --inputbg: #6e738d;
     --inputborder: #8087a2;
@@ -122,7 +126,6 @@ body[theme=macchiatofalse] {
     --bg: #24273a;
     --shadow: 0px 0px 4px #363a4f;
 }
-
 body[theme=mochafalse] {
     --inputbg: #6c7086;
     --inputborder: #7f849c;
@@ -132,6 +135,7 @@ body[theme=mochafalse] {
     --shadow: 0px 0px 4px #313244;
 }
 
+/* Sunset/Mountains/Vaporwave/Seraph/Nighttime false */
 body[theme=sunsetfalse] {
     --inputbg: #537294;
     --inputborder: #30719c;
@@ -140,7 +144,6 @@ body[theme=sunsetfalse] {
     --bg: rgb(59, 67, 78);
     --shadow: 0px 0px 2px #a5dcf5;
 }
-
 body[theme=mountainsfalse] {
     --inputbg: #d37f7f;
     --inputborder: #e28a8a;
@@ -149,7 +152,6 @@ body[theme=mountainsfalse] {
     --bg: #bf7483;
     --shadow: 0px 0px 4px #bba29b;
 }
-
 body[theme=vaporwavefalse] {
     --inputbg: #4b2d64;
     --inputborder: #74568d;
@@ -158,7 +160,6 @@ body[theme=vaporwavefalse] {
     --bg: #61437a;
     --shadow: 0px 0px 4px #000000;
 }
-
 body[theme=seraphfalse] {
     --inputbg: #000;
     --inputborder: #fff;
@@ -167,7 +168,6 @@ body[theme=seraphfalse] {
     --bg: #222222;
     --shadow: 0px 0px 4px #fff;
 }
-
 body[theme=nighttimefalse] {
     --inputbg: #29374d;
     --inputborder: #fff;
@@ -177,6 +177,7 @@ body[theme=nighttimefalse] {
     --shadow: 0px 0px 4px #fff;
 }
 
+/* Regular Latte/Frappe/Macchiato/Mocha themes */
 body[theme=latte] {
     --inputbg: #9ca0b0;
     --inputborder: #8c8fa1;
@@ -185,7 +186,6 @@ body[theme=latte] {
     --bg: #eff1f5;
     --shadow: 0px 0px 4px #ccd0da;
 }
-
 body[theme=frappe] {
     --inputbg: #737994;
     --inputborder: #838ba7;
@@ -194,7 +194,6 @@ body[theme=frappe] {
     --bg: #303446;
     --shadow: 0px 0px 4px #414559;
 }
-
 body[theme=macchiato] {
     --inputbg: #6e738d;
     --inputborder: #8087a2;
@@ -203,7 +202,6 @@ body[theme=macchiato] {
     --bg: #24273a;
     --shadow: 0px 0px 4px #363a4f;
 }
-
 body[theme=mocha] {
     --inputbg: #6c7086;
     --inputborder: #7f849c;
@@ -213,6 +211,7 @@ body[theme=mocha] {
     --shadow: 0px 0px 4px #313244;
 }
 
+/* Sunset/Mountains/Vaporwave/Seraph/Nighttime */
 body[theme=sunset] {
     --inputbg: #537294;
     --inputborder: #30719c;
@@ -221,7 +220,6 @@ body[theme=sunset] {
     --bg: url("/img/backgrounds/sunset_theme.jpg"), rgb(59, 67, 78);
     --shadow: 0px 0px 2px #a5dcf5;
 }
-
 body[theme=mountains] {
     --inputbg: #d37f7f;
     --inputborder: #e28a8a;
@@ -230,7 +228,6 @@ body[theme=mountains] {
     --bg: url("/img/backgrounds/mountains_theme.jpg"), #bf7483;
     --shadow: 0px 0px 4px #bba29b;
 }
-
 body[theme=vaporwave] {
     --inputbg: #4b2d64;
     --inputborder: #74568d;
@@ -239,7 +236,6 @@ body[theme=vaporwave] {
     --bg: url("/img/backgrounds/vaporwave_theme.jpg"), #61437a;
     --shadow: 0px 0px 4px #000000;
 }
-
 body[theme=seraph] {
     --inputbg: #000;
     --inputborder: #fff;
@@ -248,7 +244,6 @@ body[theme=seraph] {
     --bg: url("/img/backgrounds/seraph_theme.png"), #1c1a1e;
     --shadow: 0px 0px 4px #fff;
 }
-
 body[theme=nighttime] {
     --inputbg: #29374d;
     --inputborder: #fff;
