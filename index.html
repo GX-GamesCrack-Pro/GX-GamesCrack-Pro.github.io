@@ -29,11 +29,7 @@
 					.then((response) => response.json())
 					.then((data) => {
 						const randomQuote = data[Math.floor(Math.random() * data.length)];
-
-						if (randomQuote.includes("OGNUM1") && randomQuote.includes("SQRTNUM1")) {
-							const ognum = Math.floor(Math.random() * 3000);
-							randomQuote = `the square root of ${ognum} is ${Math.sqrt(ognum)}`;
-						} else if (randomQuote.includes("CURRENTURL")) {
+						{
 							randomQuote = window.location.hostname;
 						}
 
