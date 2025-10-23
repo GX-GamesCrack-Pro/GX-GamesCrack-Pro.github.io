@@ -32,7 +32,7 @@ body[theme=mainnew] {
     --inputborder: #5a189a;
     --uibg: #240046bb;
     --textcolor: #fff;
-    --bg: linear-gradient(0deg, rgba(36,0,70,1) 0%, rgba(60,9,108,1) 50%, rgba(36,0,70,1) 100%);
+    --bg: #10002b;
 }
 
 /* Keep all other themes as they were */
