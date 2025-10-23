@@ -17,8 +17,7 @@ body {
 }
 
 /* Override default purple for main theme */
-body[theme=main],
-body[theme=mainnew] {
+body[theme=main], {
     --inputbg: #6B0000;
     --inputborder: #8B0000;
     --uibg: #8B0000;
@@ -28,7 +27,7 @@ body[theme=mainnew] {
 }
 
 /* Selenite2 = old main/purple theme */
-body[theme=selenite2] {
+body[theme=mainnew] {
     --inputbg: #3c096c;
     --inputborder: #5a189a;
     --uibg: #240046bb;
